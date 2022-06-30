@@ -1,0 +1,170 @@
+:root{
+    --dark: #374151;
+    --darker:#1F2937;
+    --darkest:#111827;
+    --gray:#6B7280;
+    --light:#EEE;
+    --pink:#EC4899;
+    --purple:#8B5CF6;
+    
+}
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    font-family:'Fira Sans',sans-serif;
+
+}
+
+body{
+    color:#fff;
+    background: var(--dark);
+    display:flex;
+    flex-direction: column;
+    min-height:100vh;
+
+
+}
+
+header{
+    padding:2rem 1rem;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+
+}
+
+header h1{
+    font-size: 2.5rem;
+    color: var(--gray);
+    font-weight:300;
+    margin-bottom:1rem;
+
+}
+
+#new-task-form{
+    display: flex;
+}
+
+input,button{
+    border:none;
+    appearance:none;
+    outline: none;
+    background:none;
+
+}
+
+#new-task-input{
+    flex: 1 1 0%;
+    border-radius: 1rem;
+    background-color:var(--darker);
+    padding:1rem;
+    margin-right: 1rem;
+    font-size:1.25rem;
+    color:var(--light);
+}
+
+#new-task-input::placeholder{
+    color:var(--gray);
+}
+
+#new-task-submit{
+    color:var(--pink);
+    font-size:1.25rem;
+    background-image: linear-gradient(to right,
+    var(--pink),var(--purple));
+    font-weight:700;
+    -webkit-background-clip:text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#new-task-submit:hover{
+    opacity:0.8;
+}
+
+#new-task-submit:active{
+    opacity:0.3;
+}
+
+main{
+    flex: 1 1 0%;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+
+}
+
+.task-list{
+padding: 1rem;
+}
+
+
+.task-list h2{
+    font-size:1.5rem;
+    color: var(--gray);
+    font-weight:300;
+    margin-bottom:1rem;
+}
+
+#tasks .task{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--darkest);
+    padding:1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+#tasks .task .content{
+    flex: 1 1 0%;
+}
+
+#tasks .task .content .text{
+    color: var(--pink);
+    width: 100%;
+    font-size:1.25rem;
+    display:block;
+    transition:0.4s;
+}
+
+#tasks .task .content .text:not(:read-only){
+    color: var(--pink);
+}
+
+#tasks .task .actions{
+    display:flex;
+    margin: 0 -0.5rem;
+}
+
+.task .actions button{
+    cursor:pointer;
+    margin: 0 0.5rem;
+    font-size:1.25rem;
+    font-weight:700;
+    text-transform: uppercase;
+    transition:0.4s;
+}
+
+.task .actions button:hover{
+    opacity:0.8;
+}
+
+.task .actions button:active{
+    opacity:0.3;
+}
+
+.task .actions .edit{
+    background-image: linear-gradient(to right,
+    var(--pink),var(--purple));
+    -webkit-background-clip:text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+.task .actions .delete{
+   color:crimson;
+
+}
+
